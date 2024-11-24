@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --english-violet: #60435f;
+  --sky-magenta: #d67ab1;
+  --lavender-pink: #e2a3c7;
+  --snow: #fdf7fa;
+  --tiffany-blue: #a8dcd9;
+  --spacing: 20px;
+  --small-spacing: 10px;
+  --font: "Kanit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--snow);
+  font-family: var(--font);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--snow);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover{
+  color: var(--english-violet);
+  font-weight: bold;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: var(--snow);
+  text-align:left;
+}
+
+p{
+  text-align: center;
+  padding: var(--spacing);
+}
+
+button {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 17px;
+  transition: 0.3s;
+  font-family: inherit;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button:hover {
+  border: 2px solid var(--snow);
+  color: var(--tiffany-blue);
+  background-color: var(--english-violet);
+  font-weight: bold;
+}

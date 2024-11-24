@@ -1,0 +1,36 @@
+footer {
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--sky-magenta);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing);
+  gap: var(--spacing);
+  border: 2px solid black;
+}
+
+footer > .info-links {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing);
+}
+
+footer > .media-links {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing);
+}
+
+footer > .media-links > li > a > img {
+  width: 40px;
+  height: auto;
+}
