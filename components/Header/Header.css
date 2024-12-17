@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  min-height: 80vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@ header {
 
 header > nav {
   width: 100%;
-  height: 20vh;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,14 +85,13 @@ header > nav > .menu > ul {
 
 header > .hero {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   gap: var(--small-spacing);
   padding: var(--spacing);
-  background: url("https://i.pinimg.com/originals/3d/c3/87/3dc387151b115cf7ae0cf344b8e40eff.gif");
   background: url("https://i.pinimg.com/originals/d5/8f/a9/d58fa96e7c3ecb3969260444d993379d.gif");
 }
 
@@ -101,6 +100,7 @@ header > .hero > .inputs {
   justify-content: space-around;
   align-items: center;
   gap: var(--spacing);
+  flex-wrap: wrap;
 }
 
 header > .hero > .inputs > select {
