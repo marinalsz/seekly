@@ -11,10 +11,10 @@ const buildWebsite = () => {
   Header();
   Main();
   Footer();
-  getPhotos("candy", 10, "relevant", "teal", "landscape");
+  getPhotos("candy", 10, "relevant", "magenta", "landscape");
 };
 
-const getPhotos = async (keyword, photoNum, order, color, orientation) => {
+const getPhotos = async (keyword, photoNum, order, color, orientation) => { 
   const container = document.querySelector("#gallery");
   const message = document.querySelector("#message");
   message.textContent = "Searching for photos...";
@@ -28,34 +28,61 @@ const getPhotos = async (keyword, photoNum, order, color, orientation) => {
     printPhotos(photos);
   } catch (error) {
     message.textContent = "Something went wrong. Please try again!";
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <img src="/error.png" alt="Error" id="errorImg" />
+    `;
+    container.appendChild(li);
+    const errorImg = document.getElementById("errorImg");
+    errorImg.style.boxShadow = "none";
     console.error(error);
   }
 };
 
 const printPhotos = (photos) => {
+  const main = document.querySelector("main");
   const container = document.querySelector("#gallery");
   const message = document.querySelector("#message");
   if (photos.length === 0) {
     container.innerHTML = "";
     message.textContent =
       "No results yet, but inspiration is right around the corner!";
+    const li = document.createElement("li");
+    li.innerHTML = `
+        <img src="/character.png" alt="Flower retro character" id="characterImg" />
+      `;
+    container.appendChild(li);
+    container.style.display = "flex";
+    container.style.justifyContent = "center";
+    container.style.alignItems = "center";
+    const characterImg = document.getElementById("characterImg");
+    characterImg.style.boxShadow = "none";
+    characterImg.style.width = "300px";
+    characterImg.style.height = "300px";
     const suggestions = ["sun", "moon", "sea"];
-    const suggestionsContainer = document.getElementById("suggestions");
+    const suggestionsContainer = document.createElement("div");
+    suggestionsContainer.id = "suggestions";
     suggestionsContainer.innerHTML = `
       <p>Try one of these suggestions:</p>
+      <div>
       ${suggestions
         .map(
           (suggestion) =>
             `<button class="suggestion-btn" data-keyword="${suggestion}">${suggestion}</button>`
         )
         .join("")}
+      </div>
     `;
-    container.appendChild(suggestionsContainer);
+    main.appendChild(suggestionsContainer);
 
     document.querySelectorAll(".suggestion-btn").forEach((button) => {
       button.addEventListener("click", (event) => {
         const keyword = event.target.getAttribute("data-keyword");
         document.querySelector("#searchInput").value = keyword;
+        const suggestionsContainer = document.querySelector("#suggestions");
+        if (suggestionsContainer) {
+          suggestionsContainer.remove();
+        }
         document.querySelector("#searchBtn").click();
       });
     });
@@ -84,7 +111,7 @@ document.querySelector("#searchBtn").addEventListener("click", () => {
   const keywordValue = document.querySelector("#searchInput").value.trim();
   const photoNumValue = document.querySelector("#countInput").value;
   const orderValue = document.querySelector("#orderInput").value;
-  const colorValue = document.querySelector("#colorInput").value;
+  const colorValue = document.querySelector("#colorInput").value || "";;
   const orientationValue = document.querySelector("#orientationInput").value;
 
   if (keywordValue) {

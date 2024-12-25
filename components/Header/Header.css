@@ -31,6 +31,7 @@ header > nav > .logo > a > img {
 
 header > nav > .logo > a > img:hover {
   scale: 1.1;
+  transform: rotate(90deg);
 }
 
 header > nav > .menu {
@@ -49,8 +50,11 @@ header > nav > .menu > ul {
   align-items: center;
   position: absolute;
   right: 0;
-  top: 130px;
-  background-color: var(--english-violet);
+  top: 88px;
+  gap: var(--spacing);
+  background-color: var(--lavender-pink);
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 /*MENÚ HAMBURGUESA*/
@@ -78,6 +82,7 @@ header > nav > .menu > ul {
     right: 0;
     gap: var(--spacing);
     background-color: var(--sky-magenta);
+    border: none;
   }
 }
 
@@ -85,7 +90,7 @@ header > nav > .menu > ul {
 
 header > .hero {
   width: 100%;
-  height: 50vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

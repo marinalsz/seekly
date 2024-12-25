@@ -62,7 +62,7 @@ const template = () => `
     </select>
   </div>
   <div class="searcher">
-    <input type="text" id="searchInput" placeholder="Search free photos" />
+    <input type="text" id="searchInput" placeholder="Search" required/>
     <button id="searchBtn">Search</button>
   </div>
 </div>
