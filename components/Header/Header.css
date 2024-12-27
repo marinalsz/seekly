@@ -3,6 +3,7 @@ header {
   height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -14,7 +15,7 @@ header > nav {
   align-items: center;
   padding: var(--spacing);
   background-color: var(--sky-magenta);
-  border: 2px solid rgb(0, 0, 0);
+  border: var(--border);
 }
 
 header > nav > .logo {
@@ -43,7 +44,7 @@ header > nav > .menu {
 
 header > nav > .menu > ul {
   width: 100vw;
-  height: 100vh;
+  height: 87vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,11 +54,10 @@ header > nav > .menu > ul {
   top: 88px;
   gap: var(--spacing);
   background-color: var(--lavender-pink);
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border-left: var(--border);
+  border-right: var(--border);
+  border-bottom: var(--border);
 }
-
-/*MENÚ HAMBURGUESA*/
 
 #camera {
   display: none;
@@ -86,16 +86,14 @@ header > nav > .menu > ul {
   }
 }
 
-/*FIN MENÚ HAMBURGUESA*/
-
 header > .hero {
   width: 100%;
-  min-height: 60vh;
+  height: 87vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: var(--small-spacing);
+  gap: var(--spacing);
   padding: var(--spacing);
   background: url("https://i.pinimg.com/originals/d5/8f/a9/d58fa96e7c3ecb3969260444d993379d.gif");
 }
@@ -109,14 +107,21 @@ header > .hero > .inputs {
 }
 
 header > .hero > .inputs > select {
-  width: 100px;
+  width: 150px;
   height: 30px;
   font-family: inherit;
   text-align: center;
   border: 3px groove var(--snow);
   border-radius: 10px;
   background-color: var(--lavender-pink);
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+header > .hero > #resetFiltersBtn {
+  width: 200px;
+  height: 40px;
 }
 
 header > .hero > .searcher {
@@ -127,10 +132,9 @@ header > .hero > .searcher {
 }
 
 header > .hero > .searcher > #searchInput {
-    width: 200px;
-    height: 30px;
-    border-radius: 10px;
-    font-family: inherit;
-    text-align: center;
-  }
-  
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  font-family: inherit;
+  text-align: center;
+}

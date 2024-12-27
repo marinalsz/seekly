@@ -46,13 +46,11 @@ const getPhotos = async (keyword, photoNum, order, color, orientation) => {
     //Mensaje que se muestra si hay un error al cargar las fotos
     message.textContent = "Something went wrong. Please try again!";
     const li = document.createElement("li");
+    li.className = "centered-content";
     li.innerHTML = `
-      <img src="/error.png" alt="Error" id="errorImg" />
+      <img src="/error.png" alt="Heart retro character" id="errorImg" />
     `;
     container.appendChild(li);
-    container.style.display = "flex";
-    container.style.justifyContent = "center";
-    container.style.alignItems = "center";
     const errorImg = document.getElementById("errorImg");
     errorImg.style.boxShadow = "none";
     errorImg.style.width = "300px";
@@ -132,8 +130,10 @@ const printPhotos = (photos) => {
   }
 };
 
+//Ejecutar la función para renderizar la página web
 buildWebsite();
 
+//Evento para resetear los filtros de búsqueda
 document.querySelector("#resetFiltersBtn").addEventListener("click", () => {
   document.querySelector("#countInput").value = "";
   document.querySelector("#orderInput").value = "";
@@ -141,6 +141,7 @@ document.querySelector("#resetFiltersBtn").addEventListener("click", () => {
   document.querySelector("#orientationInput").value = "";
 });
 
+//Evento para buscar fotos
 document.querySelector("#searchBtn").addEventListener("click", () => {
   const keywordValue =
     document.querySelector("#searchInput").value.trim() || "";
@@ -150,6 +151,7 @@ document.querySelector("#searchBtn").addEventListener("click", () => {
   const orientationValue =
     document.querySelector("#orientationInput").value || "";
 
+  //Si se ingresa una palabra clave, se ejecuta la función para obtener las fotos
   if (keywordValue) {
     getPhotos(
       keywordValue,
@@ -160,6 +162,7 @@ document.querySelector("#searchBtn").addEventListener("click", () => {
     );
     document.querySelector("#searchInput").value = "";
   } else {
+    //Mensaje que se muestra si no se ingresa una palabra clave
     toastr.options = {
       closeButton: true,
       debug: false,

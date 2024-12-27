@@ -32,7 +32,7 @@ const template = () => `
   <h2>The best free stock photos, royalty-free images and videos shared by creators.</h2>
   <div class="inputs">
     <select id="countInput">
-      <option value="">Select an option</option>
+      <option value="">Select number</option>
       <option value="10">10</option>
       <option value="15">15</option>
       <option value="20">20</option>
@@ -40,12 +40,12 @@ const template = () => `
       <option value="30">30</option>
     </select>
     <select id="orderInput">
-      <option value="">Select an option</option>
+      <option value="">Select order</option>
       <option value="relevant">Relevant</option>
       <option value="latest">Latest</option>
     </select>
     <select id="colorInput">
-      <option value="">Select an option</option>
+      <option value="">Select color</option>
       <option value="teal">Teal</option>
       <option value="magenta">Magenta</option>
       <option value="black_and_white">Black and white</option>
@@ -59,13 +59,13 @@ const template = () => `
       <option value="blue">Blue</option>
     </select>
     <select id="orientationInput">
-      <option value="">Select an option</option>
+      <option value="">Select orientation</option>
       <option value="landscape">Landscape</option>
       <option value="portrait">Portrait</option>
       <option value="squarish">Squarish</option>
     </select>
-    <button id="resetFiltersBtn" type="button">Reset Filters</button>
   </div>
+  <button id="resetFiltersBtn">Reset Filters</button>
   <div class="searcher">
     <input type="text" id="searchInput" placeholder="Ex: Car" required/>
     <button id="searchBtn">Search</button>

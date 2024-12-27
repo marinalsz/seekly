@@ -1,8 +1,8 @@
 main {
   width: 100%;
   height: auto;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border-left: var(--border);
+  border-right: var(--border);
 }
 
 #message,
@@ -46,8 +46,7 @@ main {
   align-items: center;
   gap: var(--spacing);
   padding: var(--spacing);
-  border: 20px dashed var(--tiffany-blue);
-  margin-bottom: var(--spacing);
+  border-top: 8px dashed var(--tiffany-blue);
 }
 
 #suggestions > div {
@@ -60,6 +59,7 @@ main {
 }
 
 .centered-content {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

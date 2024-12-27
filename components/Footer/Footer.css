@@ -7,7 +7,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: var(--spacing);
-  border: 2px solid black;
+  border: var(--border);
 }
 
 footer > .info-links {
