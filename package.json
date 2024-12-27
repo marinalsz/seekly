@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "toastr": "^2.1.4"
   }
 }
