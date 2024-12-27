@@ -51,7 +51,6 @@ a {
 
 a:hover {
   color: var(--english-violet);
-  font-weight: bold;
 }
 
 h1 {
@@ -62,6 +61,7 @@ h1 {
 h2 {
   color: var(--snow);
   text-align: left;
+  line-height: 1.5;
 }
 
 p {
@@ -86,9 +86,4 @@ button:hover {
   color: var(--tiffany-blue);
   background-color: var(--english-violet);
   font-weight: bold;
-}
-
-button:active {
-  background-color: #6ca6cd;
-  color: var(--english-violet);
 }

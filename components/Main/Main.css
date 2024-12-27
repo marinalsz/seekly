@@ -5,7 +5,8 @@ main {
   border-right: 2px solid black;
 }
 
-#message, #suggestions > p {
+#message,
+#suggestions > p {
   width: 100%;
   height: auto;
   display: flex;
@@ -45,6 +46,8 @@ main {
   align-items: center;
   gap: var(--spacing);
   padding: var(--spacing);
+  border: 20px dashed var(--tiffany-blue);
+  margin-bottom: var(--spacing);
 }
 
 #suggestions > div {
@@ -54,4 +57,12 @@ main {
   justify-content: center;
   align-items: center;
   gap: var(--spacing);
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  grid-column: 1 / -1;
 }
